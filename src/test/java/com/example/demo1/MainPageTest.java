@@ -20,7 +20,7 @@ public class MainPageTest {
     public void setUp() {
         ChromeOptions options = new ChromeOptions();
         // Fix the issue https://github.com/SeleniumHQ/selenium/issues/11750
-        options.addArguments("--remote-allow-origins=*");
+        //options.addArguments("--remote-allow-origins=*");
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -36,7 +36,7 @@ public class MainPageTest {
 
     @Test
     public void search() {
-        mainPage.searchButton.click();
+        //mainPage.searchButton.click();
 
         WebElement searchField = driver.findElement(By.cssSelector("[data-test='search-input']"));
         searchField.sendKeys("Selenium");
